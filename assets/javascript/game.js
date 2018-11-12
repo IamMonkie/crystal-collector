@@ -32,6 +32,7 @@ let losses = 0;
 $('#gemBox1').on("click", function () {
    playerArray.push(gemValue1);
    getSum();
+   gameOverCheck();
    console.log("Gem Value 1: " + gemValue1 + '\n' +
    "target Value: " + targetValue + '\n' +
    "player Value: " + playerValue);
@@ -42,6 +43,7 @@ $('#gemBox1').on("click", function () {
 $('#gemBox2').on("click", function () {
     playerArray.push(gemValue2);
     getSum();
+    gameOverCheck();
     console.log("Gem Value 2: " + gemValue2 + '\n' +
    "target Value: " + targetValue + '\n' +
    "player Value: " + playerValue);
@@ -51,6 +53,7 @@ $('#gemBox2').on("click", function () {
 $('#gemBox3').on("click", function () {
     playerArray.push(gemValue3);
     getSum();
+    gameOverCheck();
     console.log("Gem Value 3: " + gemValue3 + '\n' +
    "target Value: " + targetValue + '\n' +
    "player Value: " + playerValue);
@@ -60,29 +63,12 @@ $('#gemBox3').on("click", function () {
 $('#gemBox4').on("click", function () {
     playerArray.push(gemValue4);
     getSum();
+    gameOverCheck();
     console.log("Gem Value 4: " + gemValue4 + '\n' +
     "target Value: " + targetValue + '\n' +
     "player Value: " + playerValue); 
     
 });
-
-//wins/ losses
-
-
-    if(playerValue === targetValue) {
-        wins++;
-        document.getElementById("winsText").textContent = "WINS: " + wins;
-        swal("THAT'S IT MORTY, WE DID IT. ", "PRESS RESET TO PLAY AGAIN", "success");
-        reset();
-        
-    }
-    
-    else if(playerValue > targetValue) {
-        losses++;
-        document.getElementById("lossesText").textContent = "LOSSES: " + losses;
-        swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE STUCK HERE", "PRESS RESET TO PLAY AGAIN", "error");
-        reset();
-    }    
 
 
 //Reset Button
@@ -122,6 +108,26 @@ function reset() {
 
     //reset energy gathered
     updatePlayer();
+    
+    //Game Over check
+    function gameOverCheck() {
+        
+        //wins check
+        if(playerValue === targetValue) {
+        wins++;
+        document.getElementById("winsText").textContent = "WINS: " + wins;
+        swal("THAT'S IT MORTY, WE DID IT. ", "PRESS RESET TO PLAY AGAIN", "success");
+        reset();
+        }
+    
+        //loss check
+        else if(playerValue > targetValue) {
+            losses++;
+            document.getElementById("lossesText").textContent = "LOSSES: " + losses;
+            swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE STUCK HERE", "PRESS RESET TO PLAY AGAIN", "error");
+            reset();
+        }    
+    }
             
 };
 
