@@ -1,0 +1,112 @@
+@font-face{
+    src: url(../css/fonts/get_schwifty.ttf);
+    font-family: getSchwiftyFont;    
+
+}
+
+body{
+    background: url(../Images/starsBG.jpg);
+}
+
+.container {
+    
+    /* margin: auto; */
+    color: #00bfd8;
+    font-family: getSchwiftyFont;
+    /* width: 100%; */
+}
+
+#titleContainer{ 
+    
+    /* width: 40%; */
+    padding: 10px;
+    margin: 10px 0px 5px 10px;
+    background-color: greenyellow;
+    font-size: 40px;
+    text-align: center;
+    color: #00bfd8;
+} 
+
+#instructionsContainer{
+    background: greenyellow;
+    /* width: */
+    margin: 5px 0px 5px 10px;
+    /* padding: 20px 10px 5% 10px; */
+    font-size: 20px;
+
+}
+
+#objectiveContainer{
+    background: greenyellow;
+    /* width: 25%; */
+    /* height:200px; */
+    padding: 5px;
+    font-size: 30px;
+    margin: 5px 0px 5px 10px;
+}
+
+#scoreboard{
+    background: greenyellow;
+    /* width: 25%; */
+    /* height: 100px; */
+    padding: 5px;
+    font-size: 30px;
+    margin: 5px 0px 5px 10px;
+}
+
+#scoreboard.p{
+    margin: 5px;
+}
+
+#gemBox1, #gemBox2, #gemBox3, #gemBox4{
+    background: greenyellow;
+    width: 150px;
+    height: 200px;
+    padding: 10px 0px 0px 10px;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px 0px 5px 10px;
+}
+    #gemBox1{
+        background: greenyellow;
+        background: url(../Images/omegaSeeds.png) no-repeat;
+        background-size: 100px;
+        background-position: center;
+    }
+
+    #gemBox2{
+        background: greenyellow;
+        background: url(../Images/cpuCrystal.png) no-repeat;
+        background-size: 100px;
+        background-position: center;
+    }
+
+    #gemBox3{
+        background: greenyellow;
+        background: url(../Images/plumbus.png) no-repeat;
+        background-size: 100px;
+        background-position: center;
+    }
+
+    #gemBox4{
+        background: greenyellow;
+        background: url(../Images/szechuanSauce.png) no-repeat;
+        background-size: 150px;
+        background-position: center;
+    }
+
+#playerScore{
+    background: greenyellow;
+    /* width: 25%; */
+    padding: 10px;
+    font-size: 40px;
+    margin: 5px 0px 5px 10px;
+}
+
+#resetBtn{
+    /* width: 25%; */
+    /* padding: 10px; */
+    font-size: 40px;
+    color: #00bfd8;
+    /* margin: 5px 0px 5px 10px; */
+}
