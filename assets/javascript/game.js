@@ -70,12 +70,12 @@ $('#gemBox4').on("click", function () {
     
 });
 
-
+/*
 //Reset Button
 $("#resetBtn").on("click", function () { 
     reset();
 })
-
+*/
 /*------------------------------------------------------------------------------------------------------------------------------------------
 //Functions
 --------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -108,28 +108,26 @@ function reset() {
 
     //reset energy gathered
     updatePlayer();
-    
-    //Game Over check
-    function gameOverCheck() {
-        
-        //wins check
-        if(playerValue === targetValue) {
+            
+};
+
+//wins/ losses
+function gameOverCheck() {
+    if(playerValue === targetValue) {
         wins++;
         document.getElementById("winsText").textContent = "WINS: " + wins;
         swal("THAT'S IT MORTY, WE DID IT. ", "PRESS RESET TO PLAY AGAIN", "success");
         reset();
-        }
     
-        //loss check
-        else if(playerValue > targetValue) {
-            losses++;
-            document.getElementById("lossesText").textContent = "LOSSES: " + losses;
-            swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE STUCK HERE", "PRESS RESET TO PLAY AGAIN", "error");
-            reset();
-        }    
     }
-            
-};
+
+    else if(playerValue > targetValue) {
+        losses++;
+        document.getElementById("lossesText").textContent = "LOSSES: " + losses;
+        swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE STUCK HERE", "PRESS RESET TO PLAY AGAIN", "error");
+        reset();
+    } 
+}
 
 //update target
 function updateTarget() {
