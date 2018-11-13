@@ -116,7 +116,7 @@ function gameOverCheck() {
     if(playerValue === targetValue) {
         wins++;
         document.getElementById("winsText").textContent = "WINS: " + wins;
-        swal("THAT'S IT MORTY, WE DID IT. ", "PRESS RESET TO PLAY AGAIN", "success");
+        swal("THAT'S IT MORTY, WE DID IT. LET'S GET THE HECK OUT OF HERE", "PRESS OK TO PLAY AGAIN", "success");
         reset();
     
     }
@@ -124,7 +124,7 @@ function gameOverCheck() {
     else if(playerValue > targetValue) {
         losses++;
         document.getElementById("lossesText").textContent = "LOSSES: " + losses;
-        swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE STUCK HERE", "PRESS RESET TO PLAY AGAIN", "error");
+        swal("AAW CRAP MORTY...YOU...YOU'VE REALLY GONE AND DONE IT THIS TIME. GUESS WERE NOT GOING ANYWHERE", "PRESS OK TO PLAY AGAIN", "error");
         reset();
     } 
 }

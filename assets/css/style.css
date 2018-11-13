@@ -69,29 +69,30 @@ body{
 }
     #gemBox1{
         background: greenyellow;
-        background: url(../Images/omegaSeeds.png) no-repeat;
+        background: url(../Images/megaSeeds.png) no-repeat;
         background-size: 100px;
         background-position: center;
+        text-align: center;
     }
 
     #gemBox2{
         background: greenyellow;
         background: url(../Images/cpuCrystal.png) no-repeat;
-        background-size: 100px;
+        background-size: 70px;
         background-position: center;
     }
 
     #gemBox3{
         background: greenyellow;
         background: url(../Images/plumbus.png) no-repeat;
-        background-size: 100px;
+        background-size: 80px;
         background-position: center;
     }
 
     #gemBox4{
         background: greenyellow;
         background: url(../Images/szechuanSauce.png) no-repeat;
-        background-size: 150px;
+        background-size: 140px;
         background-position: center;
     }
 
