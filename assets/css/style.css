@@ -1,113 +1,147 @@
-@font-face{
-    src: url(../css/fonts/get_schwifty.ttf);
-    font-family: getSchwiftyFont;    
-
+@font-face {
+  src: url(../css/fonts/get_schwifty.ttf);
+  font-family: getSchwiftyFont;
 }
 
-body{
-    background: url(../Images/starsBG.jpg);
+body {
+  background: url(../Images/starsBG.jpg);
+  color: #00bfd8;
+  -webkit-text-stroke: 0.05px greenyellow;
+  font-family: getSchwiftyFont;
+  /* width: 100vw; */
 }
 
 .container {
-    
-    /* margin: auto; */
-    color: #00bfd8;
-    font-family: getSchwiftyFont;
-    /* width: 100%; */
+  justify-content: center;
+  margin-top: 10px;
 }
 
-#titleContainer{ 
-    
-    /* width: 40%; */
-    padding: 10px;
-    margin: 10px 0px 5px 10px;
-    background-color: greenyellow;
-    font-size: 40px;
-    text-align: center;
-    color: #00bfd8;
-} 
-
-#instructionsContainer{
-    background: greenyellow;
-    /* width: */
-    margin: 5px 0px 5px 10px;
-    /* padding: 20px 10px 5% 10px; */
-    font-size: 20px;
-
+#titleContainer {
+  padding: 10px;
+  margin: 10px 10px 5px 10px;
+  background-color: greenyellow;
+  font-size: 40px;
+  text-align: center;
+  color: #00bfd8;
+  justify-content: center;
 }
 
-#objectiveContainer{
-    background: greenyellow;
-    /* width: 25%; */
-    /* height:200px; */
-    padding: 5px;
-    font-size: 30px;
-    margin: 5px 0px 5px 10px;
+#instructionsContainer {
+  background: greenyellow;
+  /* width: */
+  margin: 5px 10px 5px 10px;
+  /* padding: 20px 10px 5% 10px; */
+  font-size: 20px;
 }
 
-#scoreboard{
-    background: greenyellow;
-    /* width: 25%; */
-    /* height: 100px; */
-    padding: 5px;
-    font-size: 30px;
-    margin: 5px 0px 5px 10px;
+#objectiveContainer {
+  background: greenyellow;
+  /* width: 25%; */
+  /* height:200px; */
+  padding: 5px;
+  font-size: 30px;
+  margin: 5px 10px 5px 10px;
 }
 
-#scoreboard.p{
-    margin: 5px;
+#scoreboard {
+  background: greenyellow;
+  /* width: 25%; */
+  /* height: 100px; */
+  padding: 5px;
+  font-size: 30px;
+  margin: 5px 10px 5px 10px;
 }
 
-#gemBox1, #gemBox2, #gemBox3, #gemBox4{
-    background: greenyellow;
+#scoreboard.p {
+  margin: 5px;
+}
+
+#gemBoxContainer {
+  justify-content: center;
+}
+
+/* buttons small screen */
+@media screen and (max-width: 39.9375em) {
+  #gemBox1,
+  #gemBox2,
+  #gemBox3,
+  #gemBox4 {
     width: 150px;
     height: 200px;
-    padding: 10px 0px 0px 10px;
-    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1em;
     text-align: center;
-    margin: 5px 0px 5px 10px;
-}
-    #gemBox1{
-        background: greenyellow;
-        background: url(../Images/megaSeeds.png) no-repeat;
-        background-size: 100px;
-        background-position: center;
-        text-align: center;
-    }
-
-    #gemBox2{
-        background: greenyellow;
-        background: url(../Images/cpuCrystal.png) no-repeat;
-        background-size: 70px;
-        background-position: center;
-    }
-
-    #gemBox3{
-        background: greenyellow;
-        background: url(../Images/plumbus.png) no-repeat;
-        background-size: 80px;
-        background-position: center;
-    }
-
-    #gemBox4{
-        background: greenyellow;
-        background: url(../Images/szechuanSauce.png) no-repeat;
-        background-size: 140px;
-        background-position: center;
-    }
-
-#playerScore{
-    background: greenyellow;
-    /* width: 25%; */
-    padding: 10px;
-    font-size: 40px;
-    margin: 5px 0px 5px 10px;
+    margin: 5px 10px 5px 10px;
+    justify-content: center;
+  }
 }
 
-#resetBtn{
-    /* width: 25%; */
-    /* padding: 10px; */
-    font-size: 40px;
-    color: #00bfd8;
-    /* margin: 5px 0px 5px 10px; */
+/* buttons medium screen */
+@media screen and (min-width: 40em) {
+  #gemBox1,
+  #gemBox2,
+  #gemBox3,
+  #gemBox4 {
+    width: 20%;
+    height: 30vh;
+    padding: 10px 10px 10px 10px;
+    font-size: 1em;
+    text-align: center;
+    margin: 5px 10px 5px 10px;
+    justify-content: center;
+    /* animation: shadow-pulse 4s infinite; */
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0px rgb(173, 255, 47, 0.8);
+  }
+  100% {
+    border-radius: 50%;
+
+    box-shadow: inset 0 0 0 70px rgba(52, 255, 2, 0);
+  }
+}
+
+#gemBox1 {
+  background: greenyellow;
+  background: url(../Images/megaSeeds.png) no-repeat,
+    url("../Images/portalBG2.png") center no-repeat;
+  background-size: 100px, 150px 250px;
+  background-position: center;
+  text-align: center;
+}
+
+#gemBox2 {
+  background: greenyellow;
+  background: url(../Images/cpuCrystal.png) no-repeat,
+    url("../Images/portalBG2.png") center no-repeat;
+  background-size: 70px, 150px 250px;
+  background-position: center;
+}
+
+#gemBox3 {
+  background: greenyellow;
+  background: url(../Images/plumbus.png) no-repeat,
+    url("../Images/portalBG2.png") center no-repeat;
+  background-size: 80px, 150px 250px;
+  background-position: center;
+}
+
+#gemBox4 {
+  background: greenyellow;
+  background: url(../Images/szechuanSauce.png) no-repeat,
+    url("../Images/portalBG2.png") center no-repeat;
+  background-size: 140px, 150px 250px;
+  background-position: center;
+}
+
+#resetBtn {
+  /* width: 25%; */
+  /* padding: 10px; */
+  font-size: 40px;
+  color: #00bfd8;
+  /* margin: 5px 0px 5px 10px; */
 }

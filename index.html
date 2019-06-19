@@ -1,89 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap scripts -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- css -->
     <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- javascript -->
     <script src="assets/javascript/game.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Crystal Collector</title>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-sm col-md-8 border border-info rounded" id="titleContainer">
-                ENERGY EXTRACTOR
-            </div>
+      <div class="row">
+        <div class="col-sm border border-info rounded" id="titleContainer">
+          ENERGY EXTRACTOR
         </div>
-    
+      </div>
 
-    
-        <div class="row">
-            <div class="col-sm col-md-8 border border-info rounded" id="instructionsContainer">
-                <!-- <p>YOU WILL BE GIVEN A RANDOM NEMBER AT THE START OF THE GAME</p>
+      <div class="row">
+        <div
+          class="col-sm border border-info rounded"
+          id="instructionsContainer"
+        >
+          <!-- <p>YOU WILL BE GIVEN A RANDOM NEMBER AT THE START OF THE GAME</p>
                 <P>THERE ARE FOUR CRYSTALS BELOW. BY CLICKING ON A CRYSTAL, YOU WILL ADD A SPECIFIC AMOUNT OF POINTS TO YOUR TOTAL SCORE</P>
                 <P>YOU WIN THE GAME BY MATCHING YOUR TOTAL SCORE TO THE RANDOM NUMBER. YOU LOSE THE GAME IF YOUR TOTAL SCORE GOES ABOVE THE RANDOM NUMBER</P>
                 <P>THE VALUE OF EACH CRYSTAL IS HIDDEN FROM YOU UNTIL YOU CLICK ON IT</P>
                 <P>EACH TIME THE GAME STARTS, THE VALUES OF EACH CRYSTAL WILL CHANGE</P> -->
-                
-                <p>OH MAN MORTY...WE...WE'RE IN A REAL PICKLE HERE MORRRRTY. YOU SEE MY...MY...MY...MY INTERDIMENSIONAL PORTAL DEVICE...IT'S ALL OUT OF CHARGE MORTY...IT'S GOT NO CHARGE LEFT MORTY. WE'RE GONNA BE STUCK HERE UNLESS WE CAN EXTRACT ENOUGH ENERGY TO GET THE PORTAL DEVICE UP AND RUNNING.</p>
 
-                <P>EACH OF THE 4 OBJECTS HERE CONTAIN AN UNKNOWN AMOUNT OF ENERGY WE CAN EXTRACT. YOU CAN INITIATE THE ENERGY EXTRACOR BY CLICKING ON THE OBJECT</P>
+          <p>
+            OH MAN MORTY...WE...WE'RE IN A REAL PICKLE HERE MORRRRTY. YOU SEE
+            MY...MY...MY...MY INTERDIMENSIONAL PORTAL DEVICE...IT'S ALL OUT OF
+            CHARGE MORTY...IT'S GOT NO CHARGE LEFT MORTY. WE'RE GONNA BE STUCK
+            HERE UNLESS WE CAN EXTRACT ENOUGH ENERGY TO GET THE PORTAL DEVICE UP
+            AND RUNNING.
+          </p>
 
-                <P>WE NEED TO COLLECT THE EXACT AMOUNT OF ENERGY REQUIRED IN ORDER TO POWER UP THE PORTAL DEVICE. TOO MUCH ENERGY WILL CAUSE IT TO OVERVOLT AND THEN WELL REALLY BE UP A CREEK, SO DONT BLOW IT. </P>
-                <P></P>
-            </div>
+          <P
+            >EACH OF THE 4 OBJECTS HERE CONTAIN AN UNKNOWN AMOUNT OF ENERGY WE
+            CAN EXTRACT. YOU CAN INITIATE THE ENERGY EXTRACOR BY CLICKING ON THE
+            OBJECT</P
+          >
+
+          <P
+            >WE NEED TO COLLECT THE EXACT AMOUNT OF ENERGY REQUIRED IN ORDER TO
+            POWER UP THE PORTAL DEVICE. TOO MUCH ENERGY WILL CAUSE IT TO
+            OVERVOLT AND THEN WELL REALLY BE UP A CREEK, SO DONT BLOW IT.
+          </P>
+          <P></P>
         </div>
-    
-    
-    
-        <div class="row">
-            <div class="col-sm-4 col-md-5 border border-info rounded" id="objectiveContainer">
-                <p id="targetScore">Target Score</p>
-                <p id="playerScore">Energy Gathered</p>
-                <!-- <button type="button" class="btn btn-danger shadow p-3 mb-5 rounded border border-info " id="resetBtn">RESET</button> -->
-            </div>
-            
-            <div class="col-sm-2 col-md-3 border border-info rounded" id="scoreboard">
-                <p id="winsText">WINS</p>
-                <p id="lossesText">LOSSES</p>
-            </div>
-        </div>
+      </div>
 
-        <div class="row">
-            <div class="col-sm border border-info rounded" class="gemBox" id="gemBox1">
-                MEGA SEEDS
-                <div class="buttonBGContainer"></div>
-            </div>
-            <div class="col-sm border border-info rounded" class="gemBox" id="gemBox2">
-                ZIGERIAN PROCESSORS
-                <div class="buttonBGContainer"></div>
-            </div>
-            <div class="col-sm border border-info rounded" class="gemBox" id="gemBox3">
-                PLUMBUS
-                <div class="buttonBGContainer"></div>
-            </div>
-            <div class="col-sm border border-info rounded" class="gemBox" id="gemBox4">
-                SZECHUAN SAUCE
-                <div class="buttonBGContainer"></div>
-            </div>
+      <div class="row">
+        <div
+          class="col-sm-4 border border-info rounded"
+          id="objectiveContainer"
+        >
+          <p id="targetScore">Target Score</p>
+          <p id="playerScore">Energy Gathered</p>
+          <!-- <button type="button" class="btn btn-danger shadow p-3 mb-5 rounded border border-info " id="resetBtn">RESET</button> -->
         </div>
 
-       
+        <div class="col-sm border border-info rounded" id="scoreboard">
+          <p id="winsText">WINS</p>
+          <p id="lossesText">LOSSES</p>
+        </div>
+      </div>
+
+      <div class="row" id="gemBoxContainer">
+        <div class="col-xs-3" class="gemBox" id="gemBox1" class="glow">
+          MEGA SEEDS
+          <div class="buttonBGContainer"></div>
+        </div>
+        <div class="col-xs-3" class="gemBox" id="gemBox2">
+          ZIGERIAN PROCESSORS
+          <div class="buttonBGContainer"></div>
+        </div>
+        <div class="col-xs-3" class="gemBox" id="gemBox3">
+          PLUMBUS
+          <div class="buttonBGContainer"></div>
+        </div>
+        <div class="col-xs-3" class="gemBox" id="gemBox4">
+          SZECHUAN SAUCE
+          <div class="buttonBGContainer"></div>
+        </div>
+      </div>
     </div>
-
-
-</body>
+  </body>
 </html>
