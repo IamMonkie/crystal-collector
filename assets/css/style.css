@@ -106,10 +106,19 @@ body {
 }
 
 #gemBox1 {
-  background: greenyellow;
+  /* background: greenyellow; */
   background: url(../Images/megaSeeds.png) no-repeat,
     url("../Images/portalBG2.png") center no-repeat;
   background-size: 100px, 150px 250px;
+  background-position: center;
+  text-align: center;
+}
+
+#gemBox1:hover {
+  background: url(../Images/megaSeedsSelected.png) no-repeat,
+    url("../Images/portalSelected.png") center no-repeat no-repeat;
+
+  background-size: 110px, 150px 250px;
   background-position: center;
   text-align: center;
 }
@@ -122,6 +131,15 @@ body {
   background-position: center;
 }
 
+#gemBox2:hover {
+  background: url(../Images/cpuCrystalSelected.png) no-repeat,
+    url("../Images/portalSelected.png") center no-repeat no-repeat;
+
+  background-size: 100px, 150px 250px;
+  background-position: center;
+  text-align: center;
+}
+
 #gemBox3 {
   background: greenyellow;
   background: url(../Images/plumbus.png) no-repeat,
@@ -130,12 +148,30 @@ body {
   background-position: center;
 }
 
+#gemBox3:hover {
+  background: url(../Images/plumbusSelected.png) no-repeat,
+    url("../Images/portalSelected.png") center no-repeat no-repeat;
+
+  background-size: 100px, 150px 250px;
+  background-position: center;
+  text-align: center;
+}
+
 #gemBox4 {
   background: greenyellow;
   background: url(../Images/szechuanSauce.png) no-repeat,
     url("../Images/portalBG2.png") center no-repeat;
-  background-size: 140px, 150px 250px;
+  background-size: 120px, 150px 250px;
   background-position: center;
+}
+
+#gemBox4:hover {
+  background: url(../Images/sechuanSauceSelected.png) no-repeat,
+    url("../Images/portalSelected.png") center no-repeat no-repeat;
+
+  background-size: 130px, 150px 250px;
+  background-position: center;
+  text-align: center;
 }
 
 #resetBtn {
